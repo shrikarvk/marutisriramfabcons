@@ -302,6 +302,7 @@ p { text-wrap: pretty; }
 
 /* Reviews */
 .review-grid { display: grid; gap: 28px; align-items: start; }
+.reviews { display: grid; gap: 48px; }
 .review { position: relative; padding-top: 52px; }
 .review::before {
   content: "\201C"; position: absolute; top: -4px; left: -4px;
