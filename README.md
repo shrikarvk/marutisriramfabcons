@@ -18,3 +18,8 @@ One-page static website for Shriram Fabrications & Constructions (Hubballi, Dhar
 - **Add a review:** in `index.html`, copy a `<figure class="review">` block inside `<div class="reviews">`. Use real client feedback only.
 - **Change the photo:** replace the files in `assets/img/onsite-*` and keep the same names.
 - **Kannada tagline:** the Kannada font file holds only the letters of the current tagline. If you change the wording, either regenerate that font file or delete the `font-family` line under `.kn` in `style.css` so phones use their built-in Kannada font.
+
+### Add a photo to "Our work"
+1. Save two sizes in `assets/work/`: a thumbnail at 640px on the long side (`name-sm.jpg` + `name-sm.webp`) and a large one at 1400px (`name-lg.jpg` + `name-lg.webp`). The current photos were auto-levelled, given a little extra contrast and colour, and sharpened before resizing.
+2. Copy one `<li class="work-item">` block in `index.html`, then change the file names, the `width`/`height` of the thumbnail, the `alt` text and the caption.
+3. Blur house name plates, house numbers and vehicle number plates before publishing.

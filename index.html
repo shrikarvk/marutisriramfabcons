@@ -141,6 +141,7 @@
       </a>
       <nav class="site-nav" id="site-nav" aria-label="Main">
         <a href="#services">Services</a>
+        <a href="#work">Our work</a>
         <a href="#why">Why us</a>
         <a href="#about">About</a>
         <a href="#reviews">Reviews</a>
@@ -234,7 +235,89 @@
       </div>
     </section>
 
-    <section class="section" id="why" aria-labelledby="why-title">
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="work-title">Our work</h2>
+          <p>A few of the jobs we have done. Tap a photo to see it larger.</p>
+        </div>
+        <h3 class="work-group"><i class="key key-fab" aria-hidden="true"></i>Fabrication and welding</h3>
+        <!-- To add a photo: run the images through the same sizes (640px and 1400px, jpg + webp) into assets/work/, then copy one <li> block. -->
+        <ul class="work-grid" id="work-fab">
+          <li class="work-item">
+            <a href="assets/work/fab-laser-gate-lg.jpg" data-webp="assets/work/fab-laser-gate-lg.webp">
+              <picture>
+                <source type="image/webp" srcset="assets/work/fab-laser-gate-sm.webp">
+                <img src="assets/work/fab-laser-gate-sm.jpg" width="640" height="250" loading="lazy" decoding="async" alt="Laser-cut steel main gate with a triangle pattern and vertical bars below">
+              </picture>
+            </a>
+            <p>Laser-cut main gate</p>
+          </li>
+          <li class="work-item">
+            <a href="assets/work/fab-stair-railing-lg.jpg" data-webp="assets/work/fab-stair-railing-lg.webp">
+              <picture>
+                <source type="image/webp" srcset="assets/work/fab-stair-railing-sm.webp">
+                <img src="assets/work/fab-stair-railing-sm.jpg" width="480" height="640" loading="lazy" decoding="async" alt="Black steel staircase railing with slanted bars and a polished wooden handrail">
+              </picture>
+            </a>
+            <p>Staircase railing with wooden handrail</p>
+          </li>
+          <li class="work-item">
+            <a href="assets/work/fab-roof-truss-lg.jpg" data-webp="assets/work/fab-roof-truss-lg.webp">
+              <picture>
+                <source type="image/webp" srcset="assets/work/fab-roof-truss-sm.webp">
+                <img src="assets/work/fab-roof-truss-sm.jpg" width="640" height="480" loading="lazy" decoding="async" alt="Welder fixing steel purlins on a roof truss over yellow columns">
+              </picture>
+            </a>
+            <p>Roof truss and purlins</p>
+          </li>
+          <li class="work-item work-video">
+            <video controls muted playsinline preload="none" poster="assets/work/fab-truss-welding-poster.jpg" width="848" height="478" aria-label="Video: welding a roof truss on a terrace">
+              <source src="assets/work/fab-truss-welding.mp4" type="video/mp4">
+            </video>
+            <p>Video: welding a roof truss on a terrace</p>
+          </li>
+          <li class="work-item">
+            <a href="assets/work/fab-laser-door-lg.jpg" data-webp="assets/work/fab-laser-door-lg.webp">
+              <picture>
+                <source type="image/webp" srcset="assets/work/fab-laser-door-sm.webp">
+                <img src="assets/work/fab-laser-door-sm.jpg" width="480" height="640" loading="lazy" decoding="async" alt="Welder working on a double-leaf laser-cut steel door in a corridor">
+              </picture>
+            </a>
+            <p>Laser-cut steel door, welded on site</p>
+          </li>
+          <li class="work-item">
+            <a href="assets/work/fab-sliding-gate-lg.jpg" data-webp="assets/work/fab-sliding-gate-lg.webp">
+              <picture>
+                <source type="image/webp" srcset="assets/work/fab-sliding-gate-sm.webp">
+                <img src="assets/work/fab-sliding-gate-sm.jpg" width="640" height="480" loading="lazy" decoding="async" alt="Black steel sliding gate with wood-finish panels at a house entrance">
+              </picture>
+            </a>
+            <p>Sliding gate with wood-finish panels</p>
+          </li>
+          <li class="work-item">
+            <a href="assets/work/fab-frame-welding-lg.jpg" data-webp="assets/work/fab-frame-welding-lg.webp">
+              <picture>
+                <source type="image/webp" srcset="assets/work/fab-frame-welding-sm.webp">
+                <img src="assets/work/fab-frame-welding-sm.jpg" width="361" height="640" loading="lazy" decoding="async" alt="Welder joining square steel tubes into a long frame at the workshop">
+              </picture>
+            </a>
+            <p>Fabricating a steel frame</p>
+          </li>
+          <li class="work-item">
+            <a href="assets/work/fab-canopy-frame-lg.jpg" data-webp="assets/work/fab-canopy-frame-lg.webp">
+              <picture>
+                <source type="image/webp" srcset="assets/work/fab-canopy-frame-sm.webp">
+                <img src="assets/work/fab-canopy-frame-sm.jpg" width="640" height="288" loading="lazy" decoding="async" alt="Galvanised steel canopy frame being welded over an outdoor staircase">
+              </picture>
+            </a>
+            <p>Canopy frame over an outdoor staircase</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-sheet" id="why" aria-labelledby="why-title">
       <div class="wrap">
         <div class="section-head">
           <h2 id="why-title">Why clients choose us</h2>
@@ -252,7 +335,7 @@
       </div>
     </section>
 
-    <section class="section section-sheet" id="about" aria-labelledby="about-title">
+    <section class="section" id="about" aria-labelledby="about-title">
       <div class="wrap about-grid">
         <figure class="photo-frame">
           <picture>
@@ -284,7 +367,7 @@
       </div>
     </section>
 
-    <section class="section" id="reviews" aria-labelledby="reviews-title">
+    <section class="section section-sheet" id="reviews" aria-labelledby="reviews-title">
       <div class="wrap">
         <div class="section-head">
           <h2 id="reviews-title">What our clients say</h2>
@@ -317,7 +400,7 @@
       </div>
     </section>
 
-    <section class="section section-sheet" id="process" aria-labelledby="process-title">
+    <section class="section" id="process" aria-labelledby="process-title">
       <div class="wrap">
         <div class="section-head">
           <h2 id="process-title">How we work</h2>
@@ -332,7 +415,7 @@
       </div>
     </section>
 
-    <section class="section" id="visit" aria-labelledby="visit-title">
+    <section class="section section-sheet" id="visit" aria-labelledby="visit-title">
       <div class="wrap">
         <div class="section-head">
           <h2 id="visit-title">Visit us</h2>
@@ -482,6 +565,16 @@
       <span class="sr-only">Chat on WhatsApp</span>
     </a>
   </div>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+    <figure>
+      <img alt="">
+      <figcaption></figcaption>
+    </figure>
+    <button class="lb-btn lb-close" type="button" aria-label="Close">&times;</button>
+    <button class="lb-btn lb-prev" type="button" aria-label="Previous photo">&lsaquo;</button>
+    <button class="lb-btn lb-next" type="button" aria-label="Next photo">&rsaquo;</button>
+  </dialog>
 
   <script src="script.js" defer></script>
 </body>

@@ -51,6 +51,52 @@
     });
   }
 
+  // Our work: tap a photo to view it large (links open the photo directly without JS)
+  var lb = document.getElementById("lightbox");
+  var links = Array.prototype.slice.call(document.querySelectorAll(".work-item a"));
+  if (lb && links.length && typeof lb.showModal === "function") {
+    var lbImg = lb.querySelector("img");
+    var lbCap = lb.querySelector("figcaption");
+    var current = 0;
+    var webp = document.createElement("canvas").toDataURL("image/webp").indexOf("data:image/webp") === 0;
+    var show = function (i) {
+      current = (i + links.length) % links.length;
+      var a = links[current];
+      var thumb = a.querySelector("img");
+      lbImg.src = (webp && a.dataset.webp) || a.href;
+      lbImg.alt = thumb.alt;
+      lbCap.textContent = a.parentNode.querySelector("p").textContent;
+    };
+    links.forEach(function (a, i) {
+      a.addEventListener("click", function (e) {
+        e.preventDefault();
+        show(i);
+        lb.showModal();
+        document.body.classList.add("lb-open");
+      });
+    });
+    lb.addEventListener("close", function () {
+      document.body.classList.remove("lb-open");
+      links[current].focus();
+    });
+    lb.querySelector(".lb-close").addEventListener("click", function () { lb.close(); });
+    lb.querySelector(".lb-prev").addEventListener("click", function () { show(current - 1); });
+    lb.querySelector(".lb-next").addEventListener("click", function () { show(current + 1); });
+    lb.addEventListener("click", function (e) { if (e.target === lb || e.target.tagName === "FIGURE") lb.close(); });
+    lb.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowLeft") show(current - 1);
+      if (e.key === "ArrowRight") show(current + 1);
+    });
+    var x0 = null;
+    lb.addEventListener("touchstart", function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+    lb.addEventListener("touchend", function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0;
+      if (Math.abs(dx) > 50) show(current + (dx < 0 ? 1 : -1));
+      x0 = null;
+    });
+  }
+
   // Enquiry form: builds a WhatsApp message and opens it
   var form = document.getElementById("enquiry");
   if (form) {
