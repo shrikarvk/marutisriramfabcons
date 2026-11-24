@@ -462,6 +462,7 @@ p { text-wrap: pretty; }
 /* Our work: photo gallery (masonry columns keep each photo's own shape) */
 .work-group { display: flex; align-items: center; font-size: 1.35rem; font-stretch: 88%; font-weight: 740; margin-bottom: 20px; }
 .work-grid { columns: 2; column-gap: 12px; }
+.work-grid + .work-group { margin-top: 36px; }
 .work-item { break-inside: avoid; margin-bottom: 18px; }
 .work-item a { display: block; position: relative; overflow: hidden; background: var(--rule); border-radius: 3px; }
 .work-item img, .work-item video { width: 100%; height: auto; display: block; }
